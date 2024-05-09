@@ -34,7 +34,9 @@ public class Dictionary {
     }
 
     public void deleteWord() {
-        String wordToDelete = JOptionPane.showInputDialog(null, "Introduce la palabra que quieres eliminar:", "Eliminar Palabra", 0);
+        String wordToDeleteInput = JOptionPane.showInputDialog(null, "Introduce la palabra que quieres eliminar:", "Eliminar Palabra", 0);
+        String wordToDelete = wordToDeleteInput.toLowerCase();
+
         String initial = wordToDelete.substring(0, 1).toLowerCase();
 
         if (dictionary.containsKey(initial)) {
