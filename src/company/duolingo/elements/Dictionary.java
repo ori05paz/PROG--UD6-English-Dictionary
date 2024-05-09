@@ -12,7 +12,8 @@ public class Dictionary {
     Map<String, Set<String>> dictionary = new HashMap<>();
 
     public void addWord() {
-        String newWord = JOptionPane.showInputDialog(null, "Introduce una nueva palabra", "Nueva Palabra", 0);
+        String newWordInput = JOptionPane.showInputDialog(null, "Introduce una nueva palabra", "Nueva Palabra", 0);
+        String newWord = newWordInput.toLowerCase();
     
         String initial = newWord.substring(0, 1);
 
