@@ -27,11 +27,11 @@ public class App {
                         dictionary.wordByInitials();
                         break;
                     case 6:
-                        System.out.println("Saliendo del programa...");
+                        JOptionPane.showMessageDialog(null, "Saliendo del programa...");
                         break;    
                 
                     default:
-                        System.out.println("Opción inválida. Elige una opción válida");
+                        JOptionPane.showMessageDialog(null, "Opción inválida. Elige una opción válida");
                         break;
                 }
             } catch (NumberFormatException e) {
