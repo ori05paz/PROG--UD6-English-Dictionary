@@ -1,6 +1,6 @@
 package company.duolingo.util;
 
-
+import javax.swing.JOptionPane;
 
 public class Menu{
 
@@ -12,5 +12,7 @@ public class Menu{
                     + "4. Mostrar iniciales disponibles\n"
                     + "5. Ver palabras por inicial\n"
                     + "6. Cerrar programa";
+        String option = JOptionPane.showInputDialog(null, menu + "\n\nSelecciona una opción:");
+        return Integer.parseInt(option);
     }
 }
