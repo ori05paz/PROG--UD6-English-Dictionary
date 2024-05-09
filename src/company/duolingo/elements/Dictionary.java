@@ -64,4 +64,12 @@ public class Dictionary {
             JOptionPane.showMessageDialog(null, "La palabra no está en el diccionario.");
         }
     }
+
+    public void availableInitials() {
+        StringBuilder initialsList = new StringBuilder("Iniciales disponibles:\n");
+        for (String initial : dictionary.keySet()) {
+            initialsList.append(initial).append("\n");
+        }
+        JOptionPane.showMessageDialog(null, initialsList.toString());
+    }
 }
