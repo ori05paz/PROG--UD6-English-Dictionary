@@ -72,4 +72,20 @@ public class Dictionary {
         }
         JOptionPane.showMessageDialog(null, initialsList.toString());
     }
+
+    public void wordByInitials() {
+        String initialInput = JOptionPane.showInputDialog(null, "Introduce la inicial:", "Palabras por Inicial", JOptionPane.QUESTION_MESSAGE);
+        String initial = initialInput.substring(0, 1).toLowerCase();
+
+        if (dictionary.containsKey(initial)) {
+            Set<String> words = dictionary.get(initial);
+            StringBuilder wordsList = new StringBuilder("Palabras con inicial '" + initial + "':\n");
+            for (String word : words) {
+                wordsList.append(word).append("\n");
+            }
+            JOptionPane.showMessageDialog(null, wordsList.toString());
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay palabras con la inicial '" + initial + "'.");
+        }
+    }
 }
