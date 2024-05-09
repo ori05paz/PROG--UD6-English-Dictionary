@@ -53,7 +53,9 @@ public class Dictionary {
     }
     
     public void wordExist() {
-        String wordToSearch = JOptionPane.showInputDialog(null, "Introduce la palabra que quieres buscar:", "Buscar Palabra", 0);
+        String wordToSearchInput = JOptionPane.showInputDialog(null, "Introduce la palabra que quieres buscar:", "Buscar Palabra", 0);
+        String wordToSearch = wordToSearchInput.toLowerCase();
+
         String initial = wordToSearch.substring(0, 1).toLowerCase();
 
         if (dictionary.containsKey(initial)) {
