@@ -31,5 +31,22 @@ public class Dictionary {
             JOptionPane.showMessageDialog(null, "Palabra añadida correctamente.");
         }
     }
+
+    public void deleteWord() {
+        String wordToDelete = JOptionPane.showInputDialog(null, "Introduce la palabra que quieres eliminar:", "Eliminar Palabra", 0);
+        String initial = wordToDelete.substring(0, 1).toLowerCase();
+
+        if (dictionary.containsKey(initial)) {
+            Set<String> wordSet = dictionary.get(initial);
+            if (wordSet.remove(wordToDelete)) {
+                JOptionPane.showMessageDialog(null, "Palabra eliminada correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(null, "La palabra no estaba en el diccionario.");
+            }
+            dictionary.put(initial, wordSet);
+        } else {
+            JOptionPane.showMessageDialog(null, "La palabra no estaba en el diccionario.");
+        }
+    }
     
 }
