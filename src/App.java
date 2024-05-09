@@ -5,11 +5,12 @@ import company.duolingo.util.Menu;
 
 public class App {
     public static void main(String[] args) {
-        int option;
+        int option = 0;
         Dictionary dictionary = new Dictionary();
         do {
-            option = Menu.showMenu();
             try {
+                option = Menu.showMenu();
+            
                 switch (option) {
                     case 1:
                         dictionary.addWord();
