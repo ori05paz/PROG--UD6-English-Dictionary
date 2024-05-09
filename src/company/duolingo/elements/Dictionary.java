@@ -49,4 +49,19 @@ public class Dictionary {
         }
     }
     
+    public void wordExist() {
+        String wordToSearch = JOptionPane.showInputDialog(null, "Introduce la palabra que quieres buscar:", "Buscar Palabra", 0);
+        String initial = wordToSearch.substring(0, 1).toLowerCase();
+
+        if (dictionary.containsKey(initial)) {
+            Set<String> wordSet = dictionary.get(initial);
+            if (wordSet.contains(wordToSearch)) {
+                JOptionPane.showMessageDialog(null, "La palabra está en el diccionario.");
+            } else {
+                JOptionPane.showMessageDialog(null, "La palabra no está en el diccionario.");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "La palabra no está en el diccionario.");
+        }
+    }
 }
