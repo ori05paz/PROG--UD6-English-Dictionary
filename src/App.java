@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 import company.duolingo.elements.Dictionary;
 import company.duolingo.util.Menu;
 
@@ -7,6 +9,7 @@ public class App {
         Dictionary dictionary = new Dictionary();
         do {
             option = Menu.showMenu();
+            try {
                 switch (option) {
                     case 1:
                         dictionary.addWord();
@@ -31,6 +34,17 @@ public class App {
                         System.out.println("Opción inválida. Elige una opción válida");
                         break;
                 }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Error: Ingresa un número entero válido");
+            } catch (NullPointerException e) {
+                JOptionPane.showMessageDialog(null, "Error: Valor nulo.");
+            } catch (IllegalArgumentException e) {
+                JOptionPane.showMessageDialog(null, "Error: Argumento ilegal");
+            } catch (IndexOutOfBoundsException e) {
+                JOptionPane.showMessageDialog(null, "Error: Índice fuera de límites");
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Error inesperado: " + e.getMessage());
+            }
         } while (option != 6);
     }
 }
