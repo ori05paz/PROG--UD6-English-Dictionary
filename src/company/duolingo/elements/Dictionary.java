@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 import javax.swing.JOptionPane;
 
@@ -14,7 +15,12 @@ public class Dictionary {
     public void addWord() {
         String newWordInput = JOptionPane.showInputDialog(null, "Introduce una nueva palabra", "Nueva Palabra", 0);
         String newWord = newWordInput.toLowerCase();
-    
+
+        if (!Pattern.matches("[a-z]+", newWord)) {
+        JOptionPane.showMessageDialog(null, "La palabra debe contener solo letras de la A a la Z.");
+        return;
+        }
+
         String initial = newWord.substring(0, 1);
 
         if (this.dictionary.containsKey(initial)) {
