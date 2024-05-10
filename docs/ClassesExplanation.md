@@ -71,3 +71,17 @@ _**4.**Set<String> words = dictionary.get(initial):_ Se obtiene el conjunto de p
 _**5.**for (String word : words):_ Se itera sobre cada palabra.
 _**6.**wordsList.append(word).append("\n"):_ Todas las palbras se agregan a "wordsList" para que se construya la lista de palabras.
 _**7.** JOptionPane.showMessageDialog:_ Se muestra un cuadro de diálogo con todas las palabras de la incial.
+
+-------------------------------
+
+
+## App
+
+-------------------------------
+**ºMétodo main:**
+
+_**1.**int option = 0:_ Inicialización de la variable option con un valor de 0 utilizada para almacenar la opción seleccionada por el usuario.
+_**2.** Dictionary dictionary = new Dictionary():_ Creación de una instancia  que se utiliza para realizar operaciones en el diccionario.
+_**3.**do while (option != 6):_ Bucle do while que se ejecutará mientras el usuario no seleccione 6.
+_**4.**try catch:_ Bloque para manejar excepciones.
+_**5.**switch (option):_ Estructura switch para realizar alguna de las acciones especificadas según lo que escoja el usuario.
