@@ -6,4 +6,4 @@ _**Práctica 2 de programación - English Dictionary:** Este proyecto surge de l
 
 
 ------
-**Explicación:** [Explicación de clases]<docs/ClassesExplanation.md>
+**Explicación:** [**Explicación de clases**](docs/ClassesExplanation.md)
